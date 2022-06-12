@@ -10,7 +10,7 @@
 - Аккаунт на GitHub (https://github.com/)
 ## ==Подготовка к работе и запуск==
 - Создать в вашем Aws Amazon аккаунте key.pem (раздел EC-2 -> key pairs -> create key pair) и сохранить его на свой компьютер
-- Клонировать данный репозиторий (https://github.com/mastermole0310/Ansible.git) в Visual Studio Code на свой компьютер
+- Клонировать данный репозиторий (https://github.com/mastermole0310/Jenkins_pipeline) в Visual Studio Code на свой компьютер
 - Авторизоваться в AWS Amazon на вашем компьютере с помощью AWS CLI (https://cloudacademy.com/blog/how-to-use-aws-cli/)
 - В файле main.tf в строке private_key указываем путь к вашему ключу, а в строке key_name его назание (для каждого инстанса)
 - Выполнить команду terraform apply в Visual Studio Code на вашем компьютере
