@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'dockerfile' }
     triggers {
-        cron('H * * * * *')
+        cron('H * * * *')
     }   
     environment {
     registry = "mastermole/httpd_pipeline"
