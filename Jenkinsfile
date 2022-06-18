@@ -2,6 +2,7 @@ pipeline {
     agent { label 'dockerfile' }
     triggers {
         cron('H * * * * *')
+    }   
     environment {
     registry = "mastermole/httpd_pipeline"
     registryCredential = 'dockerhub'
