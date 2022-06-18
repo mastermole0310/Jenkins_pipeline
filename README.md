@@ -21,13 +21,17 @@
   - Настроить Jenkins -> Управление средами сборки -> Новый узел -> Название узла (Permanent Agent)
   - Создать папку jenkins в директории /home/ubuntu/ на инстансе Node1
   - Заполняем необходимые поля (https://www.youtube.com/watch?v=Ynk2ylJASEI&t=780s)
-- Настроим токкены для Github и Dockerhub:  
- - Запускаем на main_server команду ssh-keygen
- - pub_key добавляем в ваш аккаунт на Github, private_key копируем в Jenkins
- - Создаем токкен в Jenkins для Dockerhub с помощью логина и пароля для Dockerhub
+- Настроим токен для Github:
+  -  Запускаем на main_server команду ssh-keygen
+  - pub_key добавляем в ваш аккаунт на Github, private_key копируем в Jenkins (Manage Credentials)
+- Настроим токкен для Dockerhub:  
+- Создаем токкен в Jenkins с помощью логина и пароля:
+- Настроить Jenkins -> Manage Credentials -> Domains(global) -> Add Credentials.
 - Устанавливаем docker pipeline plugin и перезапускаем Jenkins
 - Создать Item -> Pipeline
-- Скопировать содержимое файла Jenkinsfile в раздел Pipeline (script) и запустить его
+- Создаем pipeline для запуска из репозитория Git:
+  - в поле для SCM выбираем git и заполняем все необходимые поля
+  - запускаем наш pipeline кпопкой "Собрать сейчас"
 - В результате в вашем аккаунте на Dockerhub создастся docker_image с названием httpd_pipeline
 ## ==АВТОР==
 - Smirnov Alexey

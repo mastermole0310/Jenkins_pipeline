@@ -8,11 +8,8 @@ pipeline {
     stages { 
         stage('Checkout external proj') {
         steps {
-            git branch: 'main',
-                credentialsId: 'ssh-github-key',
-                url: 'git@github.com:mastermole0310/my_httpd.git'
-
-            sh "ls -lat"
+            checkout scm
+                
         }
     }
 
