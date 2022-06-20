@@ -1,3 +1,4 @@
+#!/bin/bash
 apt update
 apt install openjdk-11-jre-headless -y
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
